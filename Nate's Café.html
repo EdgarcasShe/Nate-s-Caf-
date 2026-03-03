@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nate's Café</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-container">
+    <h1>Nate's Café</h1>
+  </div>
+
+  <nav>
+    <a href="#menu">Menú</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="carrito-icon" onclick="abrirCarrito()">
+    🛒 <span id="contador">0</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>El mejor café para tus mejores momentos</h2>
+  <p>Aromas intensos, sabores únicos y un ambiente acogedor</p>
+</section>
+
+<section id="menu" class="menu">
+  <h2>Nuestro Menú</h2>
+
+  <h3 class="categoria">☕ Cafés</h3>
+  <div class="productos-grid">
+
+    <div class="producto-card">
+      <img src="img/cafe1.jpg" alt="Espresso">
+      <h3>1. Espresso</h3>
+      <p>Q18</p>
+      <button onclick="agregarCarrito('Espresso',18)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/cafe2.jpg" alt="Americano">
+      <h3>2. Americano</h3>
+      <p>Q20</p>
+      <button onclick="agregarCarrito('Americano',20)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/cafe3.jpg" alt="Cappuccino">
+      <h3>3. Cappuccino</h3>
+      <p>Q25</p>
+      <button onclick="agregarCarrito('Cappuccino',25)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/cafe4.jpg" alt="Latte">
+      <h3>4. Latte</h3>
+      <p>Q26</p>
+      <button onclick="agregarCarrito('Latte',26)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/cafe5.jpg" alt="Mocha">
+      <h3>5. Mocha</h3>
+      <p>Q28</p>
+      <button onclick="agregarCarrito('Mocha',28)">Agregar</button>
+    </div>
+
+  </div>
+
+  <h3 class="categoria">🧊 Bebidas Frías</h3>
+  <div class="productos-grid">
+
+    <div class="producto-card">
+      <img src="img/frio1.jpg" alt="Frappuccino">
+      <h3>6. Frappuccino</h3>
+      <p>Q32</p>
+      <button onclick="agregarCarrito('Frappuccino',32)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/frio2.jpg" alt="Cold Brew">
+      <h3>7. Cold Brew</h3>
+      <p>Q30</p>
+      <button onclick="agregarCarrito('Cold Brew',30)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/frio3.jpg" alt="Té Helado">
+      <h3>8. Té Helado</h3>
+      <p>Q18</p>
+      <button onclick="agregarCarrito('Té Helado',18)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/frio4.jpg" alt="Limonada Natural">
+      <h3>9. Limonada Natural</h3>
+      <p>Q15</p>
+      <button onclick="agregarCarrito('Limonada Natural',15)">Agregar</button>
+    </div>
+
+  </div>
+
+  <h3 class="categoria">🍰 Pasteles</h3>
+  <div class="productos-grid">
+
+    <div class="producto-card">
+      <img src="img/pastel1.jpg" alt="Pastel de Chocolate">
+      <h3>10. Pastel de Chocolate</h3>
+      <p>Q28</p>
+      <button onclick="agregarCarrito('Pastel de Chocolate',28)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/pastel2.jpg" alt="Cheesecake">
+      <h3>11. Cheesecake</h3>
+      <p>Q30</p>
+      <button onclick="agregarCarrito('Cheesecake',30)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/pastel3.jpg" alt="Red Velvet">
+      <h3>12. Red Velvet</h3>
+      <p>Q32</p>
+      <button onclick="agregarCarrito('Red Velvet',32)">Agregar</button>
+    </div>
+
+  </div>
+
+  <h3 class="categoria">🥐 Panes</h3>
+  <div class="productos-grid">
+
+    <div class="producto-card">
+      <img src="img/pan1.jpg" alt="Croissant">
+      <h3>13. Croissant</h3>
+      <p>Q14</p>
+      <button onclick="agregarCarrito('Croissant',14)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/pan2.jpg" alt="Pan de Chocolate">
+      <h3>14. Pan de Chocolate</h3>
+      <p>Q16</p>
+      <button onclick="agregarCarrito('Pan de Chocolate',16)">Agregar</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="img/pan3.jpg" alt="Bagel">
+      <h3>15. Bagel</h3>
+      <p>Q18</p>
+      <button onclick="agregarCarrito('Bagel',18)">Agregar</button>
+    </div>
+
+  </div>
+
+</section>
+
+<div id="modal" class="modal">
+  <span class="cerrar">&times;</span>
+  <img id="imagen-grande">
+</div>
+
+<div id="carrito-panel" class="carrito-panel">
+  <h3>Carrito</h3>
+  <ul id="lista-carrito"></ul>
+  <p>Total: Q<span id="total">0</span></p>
+  <button onclick="cerrarCarrito()">Cerrar</button>
+</div>
+
+<footer id="contacto" class="footer">
+  <p>© 2026 Nate's Café | Todos los derechos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
