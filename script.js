@@ -1,26 +1,5 @@
 //imagen//
 
-const imagenes = document.querySelectorAll('.producto-card img');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('imagen-grande');
-const cerrar = document.querySelector('.cerrar');
-
-imagenes.forEach(img => {
-  img.addEventListener('click', () => {
-    modal.classList.add('mostrar');
-    modalImg.src = img.src;
-  });
-});
-
-cerrar.addEventListener('click', () => {
-  modal.classList.remove('mostrar');
-});
-
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('mostrar');
-  }
-});
 
 //carrito de compras//
 
