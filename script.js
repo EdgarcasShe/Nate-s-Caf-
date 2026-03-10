@@ -1,6 +1,4 @@
-// ===============================
-// MODAL IMAGEN
-// ===============================
+//imagen//
 
 const imagenes = document.querySelectorAll('.producto-card img');
 const modal = document.getElementById('modal');
@@ -24,10 +22,7 @@ modal.addEventListener('click', (e) => {
   }
 });
 
-
-// ===============================
-// CARRITO
-// ===============================
+//carrito de compras//
 
 let contador = 0;
 let total = 0;
@@ -38,7 +33,7 @@ const totalElemento = document.getElementById('total');
 const carritoPanel = document.getElementById('carrito-panel');
 const carritoIcon = document.querySelector('.carrito-icon');
 
-// Agregar producto
+// Agrega producto//
 function agregarCarrito(nombre, precio) {
 
   contador++;
@@ -57,7 +52,7 @@ function agregarCarrito(nombre, precio) {
 
   listaCarrito.appendChild(li);
 
-  // Botón eliminar producto
+  //boton de eliminar producto//
   li.querySelector('.eliminar').addEventListener('click', () => {
     contador--;
     total -= precio;
@@ -72,19 +67,19 @@ function agregarCarrito(nombre, precio) {
 }
 
 
-// Abrir carrito
+// Abrir producto//
 carritoIcon.addEventListener('click', () => {
   carritoPanel.classList.add('activo');
 });
 
 
-// Cerrar carrito
+// cerrar producto//
 function cerrarCarrito() {
   carritoPanel.classList.remove('activo');
 }
 
 
-// Vaciar carrito
+// vaciar carrito//
 function vaciarCarrito() {
   contador = 0;
   total = 0;
