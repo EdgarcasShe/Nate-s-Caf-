@@ -1,5 +1,10 @@
 :root {
-  
+   --cafe-oscuro: #3b1f1b;
+  --cafe-medio: #7a4a38;
+  --cafe-claro: #c7a17a;
+  --beige: #f6efe8;
+  --gris-claro: #f3f3f3;
+  --blanco: #ffffff;
 }
 
 /* RESET */
